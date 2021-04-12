@@ -22,3 +22,13 @@ In Spring, Dependency Injection is a concept where composite objects belonging t
 -       XML-based configuration.
 -       Interface-based configuration.
 -       Annotation-based configuration.
+
+## Autowiring
+- Feature in Spring framework that lets Spring IoC containers manage dependencies automatically.
+- Primitive types and strings will not be able to extend this feature.
+- Wiring: Simply attaching one object to another e.g A -> B, A is dependent on B. Attaching B with A is wiring
+- Wiring can be accomplished in two ways.
+    - Manual - Providing details in config.xml about dependencies e.g. using attribute <ref bean="abc">.
+    - Automatic(Autowiring)
+        - XML : Autowiring Modes- No, byName,byType,constructor, autodetect(deprecated since Spring 3)
+        - Annotations : @Autowired
