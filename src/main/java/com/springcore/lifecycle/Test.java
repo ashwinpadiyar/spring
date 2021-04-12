@@ -7,17 +7,20 @@ public class Test {
 	public static void main(String[] args) {
 		AbstractApplicationContext context = new ClassPathXmlApplicationContext(
 				"com/springcore/lifecycle/config.xml");
-		Lake lake = (Lake) context.getBean("lake");
-		System.out.println(lake);
-		
-		/* registering shutdownhook.
-		 * In case the user needs to rename destroy method name, he can use
-		 * "AbstactApplicationContext" and use the following method. This method
-		 * searches for the destroy-method attribute in the config.xml file.
-		 */
+//		Lake lake = (Lake) context.getBean("lake");
+//		System.out.println(lake);
+//		
+//		/* registering shutdownhook.
+//		 * In case the user needs to rename destroy method name, he can use
+//		 * "AbstactApplicationContext" and use the following method. This method
+//		 * searches for the destroy-method attribute in the config.xml file.
+//		 */
 		context.registerShutdownHook();
-		System.out.println("--------------------------------------------------");
-		PlayGround pg = (PlayGround) context.getBean("pg");
-		System.out.println(pg);
+//		System.out.println("--------------------------------------------------");
+//		PlayGround pg = (PlayGround) context.getBean("pg");
+//		System.out.println(pg);
+		
+		AnnotationComputer computer = (AnnotationComputer) context.getBean("computer");
+		System.out.println(computer);
 	}
 }

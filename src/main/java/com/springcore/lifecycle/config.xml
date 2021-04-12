@@ -7,16 +7,16 @@
 	http://www.springframework.org/schema/beans/spring-beans.xsd 
 	http://www.springframework.org/schema/context 
 	http://www.springframework.org/schema/context/spring-context.xsd">
+	<context:annotation-config />
 
+	<!-- <bean class="com.springcore.lifecycle.Lake" name="lake" init-method="startMySpringInit" 
+		destroy-method="endMySpringDestroy"> init-method="init" destroy-method="destory"> 
+		<property name="depth" value="10" /> </bean> <bean class="com.springcore.lifecycle.PlayGround" 
+		name="pg"> <property name="dimension" value="20" /> </bean> -->
 
-	<bean class="com.springcore.lifecycle.Lake" name="lake"
-		init-method="startMySpringInit" destroy-method="endMySpringDestroy">
-		<!-- init-method="init" destroy-method="destory"> -->
-		<property name="depth" value="10" />
-	</bean>
-
-	<bean class="com.springcore.lifecycle.PlayGround" name="pg">
-		<property name="dimension" value="20" />
+	<bean class="com.springcore.lifecycle.AnnotationComputer"
+		name="computer">
+		<property name="ram" value="32" />
 	</bean>
 
 
