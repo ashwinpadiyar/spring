@@ -19,6 +19,6 @@ In Spring, Dependency Injection is a concept where composite objects belonging t
 ## Spring Object LifeCycle Management
 - Spring objects require that they use init() and destroy() methods so IoC can handle their lifecycles.
 - These can be handled in three different ways:
--       XML-based configuration.
--       Interface-based configuration.
--       Annotation-based configuration.
+  - XML-based configuration.
+  - Interface-based configuration.
+  - Annotation-based configuration.
