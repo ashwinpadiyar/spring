@@ -19,10 +19,9 @@ In Spring, Dependency Injection is a concept where composite objects belonging t
 ## Spring Object LifeCycle Management
 - Spring objects require that they use init() and destroy() methods so IoC can handle their lifecycles.
 - These can be handled in three different ways:
-<<<<<<< HEAD
--       XML-based configuration.
--       Interface-based configuration.
--       Annotation-based configuration.
+ - XML-based configuration.
+ - Interface-based configuration.
+ - Annotation-based configuration.
 
 ## Autowiring
 - Feature in Spring framework that lets Spring IoC containers manage dependencies automatically.
@@ -33,8 +32,3 @@ In Spring, Dependency Injection is a concept where composite objects belonging t
     - Automatic(Autowiring)
         - XML : Autowiring Modes- No, byName,byType,constructor, autodetect(deprecated since Spring 3)
         - Annotations : @Autowired
-=======
-  - XML-based configuration.
-  - Interface-based configuration.
-  - Annotation-based configuration.
->>>>>>> b82a67b286a3a91a41d924226197bcebecdbb977
