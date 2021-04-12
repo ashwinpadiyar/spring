@@ -16,5 +16,8 @@ public class Test {
 		 * searches for the destroy-method attribute in the config.xml file.
 		 */
 		context.registerShutdownHook();
+		System.out.println("--------------------------------------------------");
+		PlayGround pg = (PlayGround) context.getBean("pg");
+		System.out.println(pg);
 	}
 }
