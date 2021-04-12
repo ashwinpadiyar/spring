@@ -31,4 +31,7 @@ In Spring, Dependency Injection is a concept where composite objects belonging t
     - Manual - Providing details in config.xml about dependencies e.g. using attribute <ref bean="abc">.
     - Automatic(Autowiring)
         - XML : Autowiring Modes- No, byName,byType,constructor, autodetect(deprecated since Spring 3)
-        - Annotations : @Autowired
+        - Annotations : @Autowired,  This annotation can be used with method or property or constructor.
+
+## Qualifier Annotation
+- Where there is a conflict between the reference type and which bean is to be autowired, we can use the @Qualifier annotation to specify the instance name for autowiring.
