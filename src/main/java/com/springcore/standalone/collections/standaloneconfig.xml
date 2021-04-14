@@ -20,10 +20,18 @@
 		<value>Vinay</value>
 	</util:list>
 
+	<!-- standalone map -->
+	<util:map map-class="java.util.HashMap"
+		id="coursefeestructure">
+		<entry key="Spring framework" value="8000" />
+		<entry key="Django framework" value="5000" />
+		<entry key="Hibernate" value="2000" />
+	</util:map>
 
 	<bean class="com.springcore.standalone.collections.Person"
 		name="person1">
 		<!-- collaborators and configuration for this bean go here -->
 		<property name="friends" ref="mybestfriends" />
+		<property name="feeStructure" ref="coursefeestructure" />
 	</bean>
 </beans>
