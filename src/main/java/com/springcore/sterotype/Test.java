@@ -10,5 +10,7 @@ public class Test {
 				"com/springcore/sterotype/steroconfig.xml");
 		Student student1 = context.getBean("changedRefName", Student.class);
 		System.out.println(student1);
+		System.out.println(student1.getAddress());
+		System.out.println(student1.getAddress().getClass().getName());
 	}
 }

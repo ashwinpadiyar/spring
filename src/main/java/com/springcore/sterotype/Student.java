@@ -1,5 +1,7 @@
 package com.springcore.sterotype;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -10,10 +12,21 @@ import org.springframework.stereotype.Component;
  */
 @Component("changedRefName")
 public class Student {
+	public List<String> getAddress() {
+		return address;
+	}
+
+	public void setAddress(List<String> address) {
+		this.address = address;
+	}
+
 	@Value("Ashwin Padiyar")
 	private String studentName;
 	@Value("Bengaluru")
 	private String city;
+	
+	@Value("#{temp}")
+	private List<String> address;
 
 	@Override
 	public String toString() {
