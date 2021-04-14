@@ -28,10 +28,18 @@
 		<entry key="Hibernate" value="2000" />
 	</util:map>
 
+	<!-- standalone properties -->
+	<util:properties id="dbconfig">
+		<prop key="driver">com.mysql.jdbc.driver</prop>
+		<prop key="username">root</prop>
+		<prop key="password">root</prop>
+	</util:properties>
+
 	<bean class="com.springcore.standalone.collections.Person"
 		name="person1">
 		<!-- collaborators and configuration for this bean go here -->
 		<property name="friends" ref="mybestfriends" />
 		<property name="feeStructure" ref="coursefeestructure" />
+		<property name="properties" ref="dbconfig" />
 	</bean>
 </beans>

@@ -13,5 +13,7 @@ public class Test {
 		System.out.println(person1.getFriends().getClass().getName());
 		System.out.println(person1.getFeeStructure());
 		System.out.println(person1.getFeeStructure().getClass().getName());
+		System.out.println(person1.getProperties());
+		System.out.println(person1.getProperties().getClass().getName());
 	}
 }
