@@ -19,6 +19,9 @@ public class Demo {
 	
 	@Value("#{new java.lang.String('Ashwin Padiyar')}")
 	private String name;
+	
+	@Value("#{1>0}")
+	private boolean isActive;
 
 	public double getE() {
 		return E;
@@ -62,7 +65,8 @@ public class Demo {
 
 	@Override
 	public String toString() {
-		return "Demo [x=" + x + ", y=" + y + ", z=" + z + ", E=" + E + ", name=" + name + "]";
+		return "Demo [x=" + x + ", y=" + y + ", z=" + z + ", E=" + E + ", name=" + name + ", isActive=" + isActive
+				+ "]";
 	}
 
 }
