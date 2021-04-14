@@ -43,3 +43,20 @@ In Spring, Dependency Injection is a concept where composite objects belonging t
     - <context:component-scan base-package="<bean class package value>">
     - This reference will be the same as the bean class name in the camelcase. 
     - e.g @component Student { . . . } , Student **student** = new Student
+
+## Spring Bean Scope
+- Singleton: We can notify this Spring IoC container that we require the object of this type.
+    > As a **default**, the spring container will always return the same object that has already been created.
+- Prototype: We can notify this Spring IoC container that we require the object of this type.
+    > An object of a single bean has multiple instances according to the number of requests for the bean.
+- request: This will be used in web application scenario
+- session: This will be used in web application scenario
+- globalsession: This will be used in web application scenario
+ 
+##### How to configure a bean scope?
+> <bean class=" " name="" **scope=""** />
+- or
+>  @Component
+>  @scope("")
+> Class Student{ . . .}
+- scope attribute will always be used only with @component annotation and with Bean attribute

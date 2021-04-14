@@ -20,4 +20,6 @@
 		<value>Mangaluru</value>
 		<value>Tumkuru</value>
 	</util:list>
+	
+	<bean class="com.springcore.sterotype.Teacher" name="teacher" scope="prototype"/>
 </beans>

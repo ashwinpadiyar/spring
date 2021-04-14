@@ -3,6 +3,7 @@ package com.springcore.sterotype;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 /**
@@ -11,6 +12,8 @@ import org.springframework.stereotype.Component;
  * the annotation component.
  */
 @Component("changedRefName")
+// adding this scope will make the Test class return two different hashcodes for Student object .
+@Scope("prototype")
 public class Student {
 	public List<String> getAddress() {
 		return address;
