@@ -3,7 +3,12 @@ package com.springcore.sterotype;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-@Component
+/**
+ * The reference name is usually the same as the class name in the camel case,
+ * if the user wishes to change it we can pass an argument as shown below inside
+ * the annotation component.
+ */
+@Component("changedRefName")
 public class Student {
 	@Value("Ashwin Padiyar")
 	private String studentName;
