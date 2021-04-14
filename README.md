@@ -35,3 +35,11 @@ In Spring, Dependency Injection is a concept where composite objects belonging t
 
 ## Qualifier Annotation
 - Where there is a conflict between the reference type and which bean is to be autowired, we can use the @Qualifier annotation to specify the instance name for autowiring.
+
+## Sterotype Annotations
+- Until now bean metadata was set in the config XML file for the spring container so that bean objects could be created for use by the spring framework. 
+- Also, we have the option of using annotations(Stereotype annotation). 
+    - We can use @component with bean classes.
+    - <context:component-scan base-package="<bean class package value>">
+    - This reference will be the same as the bean class name in the camelcase. 
+    - e.g @component Student { . . . } , Student **student** = new Student
