@@ -5,16 +5,36 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class Demo {
-
-	@Override
-	public String toString() {
-		return "Demo [x=" + x + ", y=" + y + "]";
-	}
-	
 	@Value("#{9+11}")
 	private int x;
+
 	@Value("#{19+11}")
 	private int y;
+
+	@Value("#{T(java.lang.Math).sqrt(25)}")
+	private double z;
+
+	@Value("#{T(java.lang.Math).E}")
+	private double E;
+	
+	@Value("#{new java.lang.String('Ashwin Padiyar')}")
+	private String name;
+
+	public double getE() {
+		return E;
+	}
+
+	public void setE(double e) {
+		E = e;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
 
 	public int getX() {
 		return x;
@@ -30,6 +50,19 @@ public class Demo {
 
 	public void setY(int y) {
 		this.y = y;
+	}
+
+	public double getZ() {
+		return z;
+	}
+
+	public void setZ(double z) {
+		this.z = z;
+	}
+
+	@Override
+	public String toString() {
+		return "Demo [x=" + x + ", y=" + y + ", z=" + z + ", E=" + E + ", name=" + name + "]";
 	}
 
 }

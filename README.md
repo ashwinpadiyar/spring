@@ -70,3 +70,10 @@ In Spring, Dependency Injection is a concept where composite objects belonging t
 - Few valid expressions in spring:
 >  @Value("#{11+22}").
 > @Value("#{8>6?88:55}").
+
+### Invoking static methods and variable from SpEL
+> Syntax: T(class).method(param)
+---
+> T(class).variable
+- Create and invoke objects
+> new Object(value)
