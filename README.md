@@ -60,3 +60,13 @@ In Spring, Dependency Injection is a concept where composite objects belonging t
 >  @scope("")
 > Class Student{ . . .}
 - scope attribute will always be used only with @component annotation and with Bean attribute
+
+## Spring Expression Language
+- SpEL support parsing and executing expression with the help of @Value annotations.
+> e.g. @Value("#{expression}")
+-  Expression can be:
+    - Classes, Variables, Methods, Constructors and objects.
+    - Symbols like char,numerics,operators,keywords and special symbols which return a value.
+- Few valid expressions in spring:
+>  @Value("#{11+22}").
+> @Value("#{8>6?88:55}").
